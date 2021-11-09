@@ -5,7 +5,7 @@ y_value = [i ** 2 for i in x_value]
 
 plt.style.use('seaborn')
 fig, ax = plt.subplots()
-ax.scatter(x_value, y_value, s=10, c=[(0, 0.8, 0)])
+ax.scatter(x_value, y_value, s=10, c=y_value, cmap=plt.cm.YlGn)
 
 # set the title of figure and label of axis
 ax.set_title('squares', fontsize=24)
@@ -18,4 +18,5 @@ ax.tick_params(axis='both', which='major', labelsize=14)
 # set the range of value of each axis
 ax.axis([0, 1100, 0, 1100000])
 
-plt.show()
+# plt.show()
+plt.savefig(r'C:\Users\ZiJie.Zhao\Desktop\test.png', bbox_inches='tight')
