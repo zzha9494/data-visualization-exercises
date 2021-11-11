@@ -21,8 +21,9 @@ with open(filename) as f:
 # draw the chart according to high temperature
 plt.style.use('seaborn')
 fig, ax = plt.subplots()
-ax.plot(dates, highs, c='red')
-ax.plot(dates, lows, c='b')
+ax.plot(dates, highs, c='red', alpha=0.5)
+ax.plot(dates, lows, c='b', alpha=0.5)
+ax.fill_between(dates, highs, lows, facecolor='b', alpha=0.1)
 
 # set the format
 ax.set_title('the daily temperature of 2018', fontsize=24)
