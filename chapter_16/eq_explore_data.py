@@ -1,5 +1,7 @@
 import json
 
+import pandas as pd
+
 # explore the data structure
 filename = r'data\eq_data_1_day_m1.json'
 with open(filename) as f:
@@ -22,4 +24,6 @@ for eq_dict in all_eq_data:
     lons.append(lon)
     lats.append(lat)
 
-
+data = pd.DataFrame(
+    data=zip(lons, lats, titles, mags), columns=['longitude', 'latitude', 'location', 'magnitude']
+)
