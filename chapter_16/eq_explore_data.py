@@ -3,7 +3,7 @@ import json
 import pandas as pd
 
 # explore the data structure
-filename = r'data\eq_data_1_day_m1.json'
+filename = r'data\eq_data_30_day_m1.json'
 with open(filename) as f:
     all_eq_data = json.load(f)
 

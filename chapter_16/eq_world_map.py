@@ -14,6 +14,8 @@ fig = px.scatter(
     title='scatter of eq of the world',
     size='magnitude',
     size_max=10,
+    color='magnitude',
+    hover_name='location'
 )
 fig.write_html("global_earthquakes.html")
 fig.show()
